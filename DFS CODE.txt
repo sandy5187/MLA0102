@@ -1,0 +1,22 @@
+def dfs(v):
+    visited[v] = True
+    print(chr(v + 65), end=" ")
+
+    for i in range(n):
+        if graph[v][i] == 1 and not visited[i]:
+            dfs(i)
+
+n = int(input("Enter the number of vertices: "))
+
+print("Enter the adjacency matrix:")
+graph = []
+for i in range(n):
+    graph.append(list(map(int, input().split())))
+
+visited = [False] * n
+
+start = input("Enter the starting vertex (A, B, C...): ").upper()
+start_index = ord(start) - 65
+
+print("DFS Traversal:")
+dfs(start_index)
