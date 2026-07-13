@@ -1,0 +1,8 @@
+Algorithm
+Input the number of vertices.
+Input the adjacency matrix.
+Input the starting vertex as a letter (A, B, C, ...).
+Convert the starting letter to its corresponding index.
+Mark the current vertex as visited and print its letter.
+Recursively visit all adjacent unvisited vertices.
+End when all reachable vertices are visited
